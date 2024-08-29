@@ -1,0 +1,102 @@
+
+.main-content{
+  background: #fff;
+}
+
+.topbar {
+  height: 40px;
+  background: #e8231a;
+  margin-bottom: 20px;
+}
+.nav-region {
+  width: 1000px;
+  margin: 0 auto;
+  height: 40px;
+  .nav-pills {
+    float: left;
+    width:60%;
+    .nav-item {
+      height: 40px;
+      border-right: 1px solid #de543e;
+      a{
+        color: #fff;
+        font-size: 14px;
+      }
+      &:nth-of-type(3){
+        background: rgba(0,0,0,0.2);
+        font-weight: bold;
+      }
+      a:hover{
+        background: rgba(0,0,0,0.2);
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+
+.data-content{
+  width: 1000px;
+  height: 740px;
+  margin: 0 auto;
+}
+
+
+.adhibition{
+  h5{
+    line-height: 40px;
+    font-size: 24px;
+    color:#d6290e;
+    padding-left: 20px;
+    font-weight: bold;
+  }
+  .hospital{
+    width: 100%;
+    height:360px;
+    display: flex;
+    margin-top: 20px;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    .scale{
+      width: 24%;
+      float: left;
+      margin-left:1%;
+      border: 1px solid #c4d4e2;
+      border-radius: 5px;
+      background: #f1f9ff;
+    }
+    dl{
+      width: 100%;
+      dt{
+        width: 100%;
+        height: 176px;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      dd{
+        padding:0 10px;
+        line-height: 10px;
+        padding-top: 6px;
+        h4{
+          font-size: 14px;
+          font-weight: bold;
+          color: #333;
+        }
+        .content{
+          line-height: 22px;
+          font-size: 12px;
+          height:110px;
+        }
+        a{
+          color: #de543e;
+          &:hover{
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+

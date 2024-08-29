@@ -1,0 +1,90 @@
+
+<app-layout-header></app-layout-header>
+
+
+<div class="main-content">
+  <div class="topbar">
+    <div class="nav-region">
+      <app-nav-bar></app-nav-bar>
+    </div>
+  </div>
+
+  <div class="data-content">
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3">
+          <div style="width: 100%;">
+            <div class="panel-group" id="accordion2">
+              <div class="panel-heading">
+                <strong style="font-size: 24px; color: #666">区域监控图</strong>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                  <a class="accordion-toggle">监控图展示</a>
+                </div>
+                <div id="collapseTwo" class="panel-collapse in" style="height: auto;">
+                  <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li [ngStyle]="getStyle(flag01)" (click)="showContent(1)"><a>医疗卫生机构总数</a>
+                      </li>
+                      <li [ngStyle]="getStyle(flag02)" (click)="showContent(2)"><a>卫生总费用</a>
+                      </li>
+                      <li [ngStyle]="getStyle(flag03)" (click)="showContent(3)"><a>全国医疗卫生机构住院量增长速度</a>
+                      </li>
+                      <li [ngStyle]="getStyle(flag04)" (click)="showContent(4)"><a>各地医疗卫生机构数</a>
+                      </li>
+                      <li [ngStyle]="getStyle(flag05)" (click)="showContent(5)"><a>全国丙类传染病发病以及死亡数</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-md-9">
+          <div class="find-want">
+            <p>看不到你要找的东西？</p>
+            <p>
+              <button class="btn btn-primary">添加反馈</button>
+            </p>
+          </div>
+
+          <div *ngIf="flag01" class="view-cont">
+            <app-show-bar></app-show-bar>
+          </div>
+
+          <div *ngIf="flag02" class="view-cont">
+            <app-show-pie></app-show-pie>
+          </div>
+
+          <div *ngIf="flag03" class="view-cont">
+            <app-show-line></app-show-line>
+          </div>
+
+          <div *ngIf="flag04" class="view-cont">
+            <app-map-echart [data]="data" [mapType]="mapType" [parent]="parent" (emitValue)="reset($event)"></app-map-echart>
+          </div>
+
+          <div *ngIf="flag05" class="view-cont">
+            <app-show-echart></app-show-echart>
+          </div>
+
+          <div class="buy">
+            <app-to-buy></app-to-buy>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <div style="height: 60px"></div>
+</div>
+
+
+<app-layout-footer></app-layout-footer>

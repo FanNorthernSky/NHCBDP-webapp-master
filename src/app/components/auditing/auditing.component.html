@@ -1,0 +1,83 @@
+<app-header></app-header>
+
+<div class="platform-nav">
+  <h5>结构化医疗信息平台／审核进度查询</h5>
+</div>
+
+<div class="data-content">
+  <div class="home-content">
+    <div class="list-left">
+      <h3>已发起的申请</h3>
+
+      <div>
+        文件树
+      </div>
+    </div>
+
+    <div class="list-left list-right">
+      <div class="schedule">
+        <h4>审核进度</h4>
+        <div class="link-message">
+             <p>
+               申请单号 ： 123456 <br>
+               <span>2017年9月15日16：00</span>
+             </p>
+            <ul>
+              <li>
+                <img src="/assets/images/true.png" alt="">
+                <label>提交审核</label>
+                <img src="/assets/images/jiantou.png" alt="">
+              </li>
+              <li (click)="technology()">
+                <img src="/assets/images/true.png" alt="">
+                <label>技术审核</label>
+                <img src="/assets/images/jiantou.png" alt="">
+              </li>
+              <li (click)="law()">
+                <img src="/assets/images/true.png" alt="">
+                <label>法务审核</label>
+                <img src="/assets/images/jiantou.png" alt="">
+              </li>
+              <li (click)="done()">
+                <img src="/assets/images/true.png" alt="">
+                <label>完成</label>
+              </li>
+            </ul>
+        </div>
+
+        <div class="link-message detail">
+          <p>
+            申请单号 <br>
+            <span>名称 ：申请1</span>
+          </p>
+          <ul>
+            <li>申请人姓名：刘德芳</li>
+            <li>证件号码：138762312234567890</li>
+            <li>公司名称：北医三院</li>
+            <li>申请内容：数据表、医学影像、分析结果</li>
+          </ul>
+          <ul>
+            <li>技术审核：已成功</li>
+          </ul>
+
+          <ul>
+            <li>法务审核：已成功</li>
+          </ul>
+
+          <ul>
+            <li>审核已完成！ 可以进入   <button class="btn btn-primary" (click)="gotoBuy()">购买</button></li>
+          </ul>
+
+        </div>
+      </div>
+  </div>
+  </div>
+
+</div>
+
+<app-layout-footer></app-layout-footer>
+
+
+
+
+
